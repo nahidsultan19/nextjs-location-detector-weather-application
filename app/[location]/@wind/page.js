@@ -1,9 +1,10 @@
-const WindPage = () => {
-  return (
-    <div>
-      <h2>Wind Page</h2>
-    </div>
-  );
+import WindComponent from "@/app/components/WindComponent";
+
+const WindPage = ({
+  params: { location },
+  searchParams: { latitude, longitude },
+}) => {
+  return <WindComponent lat={latitude} lon={longitude} />;
 };
 
 export default WindPage;
