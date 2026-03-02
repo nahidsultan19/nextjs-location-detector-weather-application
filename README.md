@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Project Descriptions
+
+Developed a weather application using Next.js App Router with advanced routing architecture.
+
+- Created custom API routes to handle weather data for multiple predefined locations.
+
+- Implemented Parallel Routes and Slots to structure the layout efficiently and improve UI composition.
+
+- Used the Browser Geolocation API to detect user latitude and longitude, then dynamically redirected from the main page.js to location-specific routes.
+
+- Designed a reusable data-fetching utility library to avoid placing fetch logic directly inside components, ensuring better separation of concerns and reusability across different pages.
+
+- Retrieved and rendered dynamic weather data into JSX-based UI components.
+
+- Implemented a location switch feature, allowing users to toggle between supported locations.
+
+- Added direct URL-based location support, enabling users to access weather information via route parameters.
