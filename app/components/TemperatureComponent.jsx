@@ -15,9 +15,11 @@ const TemperatureComponent = async ({ lat, lon }) => {
           width={18}
           height={18}
         />
-        <h3 className="feature-title">{temp}°C</h3>
+        <h3 className="feature-title">{temp.toFixed(0)}°C</h3>
 
-        <span className="feature-name">Feels Like {feels_like}°C</span>
+        <span className="feature-name">
+          Feels Like {feels_like.toFixed(0)}°C
+        </span>
       </div>
     </Card>
   );
