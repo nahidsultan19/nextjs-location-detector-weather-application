@@ -20,7 +20,7 @@ export default function RootLayout({
         src="/background.png"
         className="bg-img"
         width={700}
-        height={1200}
+        height={700}
         alt="background image"
       />
 

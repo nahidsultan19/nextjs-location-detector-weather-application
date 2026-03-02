@@ -3,19 +3,21 @@ import Image from "next/image";
 import Card from "./Card";
 
 const WeatherComponent = async ({ lat, lon }) => {
-  const { main, description } = await getWeatherData(lat, lon);
+  const { main, description, icon } = await getWeatherData(lat, lon);
+
+  const iconUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   return (
     <Card>
       <h6 class="feature-name">Current Weather</h6>
       <div class="feature-main">
         <Image
           class="max-w-20"
-          src="/icon_rain.png"
-          alt="rain icon"
+          src={iconUrl}
+          alt="weather icon"
           width={200}
           height={200}
         />
-        <h3 class="feature-title">{main}</h3>
+        <h3 class="feature-title">{main} </h3>
         <span class="feature-name">{description}</span>
       </div>
     </Card>
