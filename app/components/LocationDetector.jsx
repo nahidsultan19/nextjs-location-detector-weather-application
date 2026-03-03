@@ -18,10 +18,10 @@ const LocationDetector = () => {
         params.set("latitude", position.coords.latitude);
         params.set("longitude", position.coords.longitude);
         setLoading(false);
-        router.push(`/current?${params.toString()}`);
+        router.replace(`/current?${params.toString()}`);
       });
     }
-  }, [pathName, searchParams]);
+  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center h-screen bg-slate-700 text-white">
