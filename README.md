@@ -52,3 +52,10 @@ Developed a weather application using Next.js App Router with advanced routing a
 - Implemented a location switch feature, allowing users to toggle between supported locations.
 
 - Added direct URL-based location support, enabling users to access weather information via route parameters.
+- implement real-time clock updating to calling api.
+
+## component architecture
+
+- server component for data fetching
+- client component for live clock
+- URL based location switching
