@@ -1,8 +1,11 @@
-import { getLocationData } from "@/lib/location-info";
+import { getLocationData, getTimezone } from "@/lib/location-info";
+import Clock from "./Clock";
 import LocationSwitcher from "./LocationSwitcher";
 
 const LocationInfo = async ({ lat, lon }) => {
   const locationInfo = await getLocationData(lat, lon);
+  const timezone = await getTimezone(lat, lon);
+
   return (
     <div className="col-span-12 flex flex-col justify-end lg:col-span-8 2xl:col-span-9">
       <div>
@@ -17,8 +20,9 @@ const LocationInfo = async ({ lat, lon }) => {
           {locationInfo?.countryName} | {locationInfo?.city}
         </p>
         <div className="flex items-center gap-2 text-xs text-[#92B6F5] lg:text-sm">
-          <span>{new Date().toLocaleTimeString()}</span>{" "}
-          <span>{new Date().toDateString()}</span>
+          {/* <span>{new Date().toLocaleTimeString()}</span>{" "}
+          <span>{new Date().toDateString()}</span> */}
+          <Clock timezoneOffset={timezone} />
         </div>
       </div>
     </div>
